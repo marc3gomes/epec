@@ -1693,7 +1693,7 @@
                     let tl = gsap.timeline( {
                         paused: true, onReverseComplete: function () {
                             setTimeout( function () {
-                                mainIcon.find( ".icon-1 , .icon-3" ).css( "transform", "" ).css( "display", "" );
+                                mainIcon.find( ".icon-1, .icon-3" ).css( "transform", "" ).css( "display", "" );
                             }, 50 );
 
                             console.log( 'onReverseComplete : tl' );
@@ -1719,6 +1719,8 @@
                     tl.to( mainIcon.find( ".icon-1" ), 0.9, { 
                         width: 25,
                         rotation: 40,
+                        translateY:10,
+                        translateX:35,
                         top: 0,
                         ease: Ease, 
                         borderRadius: 0,

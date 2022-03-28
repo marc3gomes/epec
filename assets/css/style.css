@@ -1271,8 +1271,8 @@ body:not(.v-dark) .site-header .main-logo .dark-logo {
 .site-header .menu-icon:hover .icon-m .icon-1,
 .site-header .menu-icon:hover .icon-m .icon-2 {
   -webkit-transform: translateY(15px) translateX(35px);
-      -ms-transform: translateY(15px) translateX(35px);
-          transform: translateY(15px) translateX(35px);
+  -ms-transform: translateY(15px) translateX(35px);
+  transform: translateY(15px) translateX(35px);
 }
 .site-header .menu-icon:hover .text-menu .text-button .dsn-word-wrapper {
   overflow: hidden;
