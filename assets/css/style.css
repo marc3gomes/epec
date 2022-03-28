@@ -5272,8 +5272,6 @@ body.dsn-show-contact .contact-modal {
 @media only screen and (max-width: 575px) {
   .footer .social-icones .footer-social ul li {
     font-size: 13px;
-    margin-right: 3px;
-    padding-right: 3px;
   }
 }
 .footer .social-icones .footer-social ul li:first-of-type {
@@ -5290,12 +5288,12 @@ body.dsn-show-contact .contact-modal {
 }
 .footer .credits-epec {
   text-align: right;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 @media only screen and (max-width: 767px) {
   .footer .credits-epec {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 .footer .credits-epec h5 {
