@@ -130,7 +130,7 @@
 }
 
 .section-title {
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h3);
 }
 
 h6 {
@@ -141,6 +141,10 @@ h6 {
 
 h6.yellow {
   color:var(--theme-color3);
+}
+
+h6.blue {
+  color:var(--theme-color4);
 }
 
 p {
@@ -2416,7 +2420,7 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
   grid-row-gap: 5px;
 }
 
-.box-info [data-dsn-grid=move-up], [data-dsn-grid=moveUp] {
+.img-container {
   overflow: visible;
   object-position: top;
 }
@@ -3419,6 +3423,8 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
 }
 .box-seat .pro-text:not(.container) {
   max-width: 600px;
+  border-radius: 40px;
+  background-color: rgb(16, 16, 16, 95%);
 }
 @media only screen and (max-width: 991px) {
   .box-seat .pro-text:not(.container) {
