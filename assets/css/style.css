@@ -56,6 +56,11 @@
   src: url('../../assets/fonts/Montserrat-Medium.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('../../assets/fonts/MGothamMedium.ttf') format('truetype');
+}
+
 
 :root, :root .v-light {
   --bg-color: #f9f9f9;
@@ -72,8 +77,11 @@
 :root .v-dark, :root .v-dark-head {
   --bg-color: #000;
   --assistant-color: #101010;
-  --theme-color: #05A8E1;
-  --font-color: #bbb;
+  --theme-color1: #BF2836;
+  --theme-color2: #ED4A2E;
+  --theme-color3: #EDBF49;
+  --theme-color4: #05A8E1;
+  --font-color: #fff;
   --heading-color: #fff;
   --border-color: rgba(255, 255, 255, 0.07);
   --smooth-color: #f9f9f9;
@@ -85,7 +93,10 @@
   .v-dark-head-mobile {
     --bg-color: #000;
     --assistant-color: #101010;
-    --theme-color: #05A8E1;
+    --theme-color1: #BF2836;
+    --theme-color2: #ED4A2E;
+    --theme-color3: #EDBF49;
+    --theme-color4: #05A8E1;
     --font-color: #bbb;
     --heading-color: #fff;
     --border-color: rgba(255, 255, 255, 0.07);
@@ -98,6 +109,7 @@
 :root {
   --body-font: 'SCP SemiBold', sans-serif;
   --heading-font: "SCP Bold", sans-serif;
+  --subtitle-font: 'Gotham Medium', sans-serif;
   --font-code: Menlo, monaco, Consolas, Lucida Console, monospace;
   --font-pre: "Courier 10 Pitch", Courier, monospace;
   --font-size-base: 16px;
@@ -106,7 +118,7 @@
   --font-size-h3: 30px;
   --font-size-h4: 25px;
   --font-size-h5: 22px;
-  --font-size-h6: 16px;
+  --font-size-h6: 18px;
   --menu-size: 12px;
   --line-height-base: 1.4;
   --line-height-content: 1.6;
@@ -115,6 +127,50 @@
   --margin-padding-mobile: 80px;
   --body-style-space: 100px;
   --smooth-width: 4px;
+}
+
+.section-title {
+  font-size: var(--font-size-h2);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  font-family: var(--subtitle-font);
+  letter-spacing: 0;
+}
+
+h6.yellow {
+  color:var(--theme-color3);
+}
+
+p {
+  font-family: var(--subtitle-font);
+  font-weight:600;
+}
+
+p cite{
+  color:var(--theme-color4);
+  font-style: normal;
+}
+
+.pulse {
+	background: rgba(255, 177, 66, 1);
+	box-shadow: 0 0 0 0 rgba(255, 177, 66, 1);
+  animation: pulse-yellow 3s infinite;
+}
+
+@keyframes pulse-yellow {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 177, 66, 0.7);
+	}
+	
+	70% {
+		box-shadow: 0 0 0 10px rgba(255, 177, 66, 0);
+	}
+	
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 177, 66, 0);
+	}
 }
 
 /* -------------------------------------------------------
@@ -2242,7 +2298,6 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
 @media only screen and (min-width: 992px) {
   .about-section .title-move {
     position: absolute;
-    right: -150px;
     top: 0;
   }
 }
@@ -2345,15 +2400,45 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
 .box-awards-item.big-number .title {
   font-size: 110px;
 }
-.box-awards-item.has-border {
-  padding: 10px;
-  border: 1px solid var(--border-color);
-}
 .box-awards-item .title {
   font-weight: bold;
-  margin-right: 5px;
+  font-size: 24px;
+  letter-spacing: 0;
 }
+
+.box-info .d-grid:not(.d-grid-no-space) {
+  grid-column-gap: 0px;
+  grid-row-gap: 5px;
+}
+
+.box-info [data-dsn-grid=move-up], [data-dsn-grid=moveUp] {
+  overflow: visible;
+  object-position: top;
+}
+
+.box-awards-item h5.red {
+  background-color: var(--theme-color1);
+}
+
+.box-awards-item h5.orange {
+  background-color: var(--theme-color2);
+}
+
+.box-awards-item h5.yellow {
+  background-color: var(--theme-color3);
+  text-align: center;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.box-awards-item h5.blue {
+  background-color: var(--theme-color4);
+  border-radius: 5px 0px 0px 5px;
+}
+
 .box-awards-item .sm-title-block {
+  font-size: 38px;
+  letter-spacing: 0;
+  line-height: 46px;
   font-weight: 400;
 }
 
