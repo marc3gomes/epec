@@ -927,10 +927,6 @@ input[type=search]::-webkit-search-decoration {
   .link-vist {
     margin-top: 20px;
   }
-
-  .main-slider .dsn-slider-content .slide-content.dsn-active {
-    display: none;
-  }
 }
 
 [data-overlay="1"]:before {
@@ -2613,13 +2609,13 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
 @media only screen and (max-width: 767px) {
   .service-lest-item .block-number {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 50px;
-            flex: 0 1 50px;
+    -ms-flex: 0 1 50px;
+    flex: 0 1 50px;
   }
   .grid-md-4 {
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4,1fr);
-}
+  }
 }
 @media only screen and (max-width: 575px) {
   .service-lest-item .block-number {
