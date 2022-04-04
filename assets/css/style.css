@@ -76,14 +76,14 @@
 
 :root .v-dark, :root .v-dark-head {
   --bg-color: #000;
-  --assistant-color: #101010;
+  --assistant-color: #080808;
   --theme-color1: #BF2836;
   --theme-color2: #ED4A2E;
   --theme-color3: #EDBF49;
   --theme-color4: #05A8E1;
   --font-color: #fff;
   --heading-color: #fff;
-  --border-color: rgba(255, 255, 255, 0.07);
+  --border-color: rgba(255, 255, 255, 0.03);
   --smooth-color: #f9f9f9;
   --reverse-color: #f9f9f9;
   --reverse-heading-color: #000;
@@ -111,14 +111,14 @@
   --heading-font: "SCP Bold", sans-serif;
   --subtitle-font: 'Gotham Medium', sans-serif;
   --font-code: Menlo, monaco, Consolas, Lucida Console, monospace;
-  --font-pre: "Courier 10 Pitch", Courier, monospace;
-  --font-size-base: 16px;
+  --font-pre: 'Montserrat Medium',"Courier 10 Pitch", Courier, monospace;
+  --font-size-base: 14px;
   --font-size-h1: 40px;
   --font-size-h2: 35px;
   --font-size-h3: 30px;
   --font-size-h4: 25px;
   --font-size-h5: 22px;
-  --font-size-h6: 18px;
+  --font-size-h6: 16px;
   --menu-size: 12px;
   --line-height-base: 1.4;
   --line-height-content: 1.6;
@@ -131,6 +131,7 @@
 
 .section-title {
   font-size: var(--font-size-h3);
+  letter-spacing: 0px;
 }
 
 h6 {
@@ -147,6 +148,10 @@ h6.blue {
   color:var(--theme-color4);
 }
 
+h6.red {
+  color:var(--theme-color1);
+}
+
 p {
   font-family: var(--subtitle-font);
   font-weight:600;
@@ -161,6 +166,14 @@ p cite{
 	background: rgba(255, 177, 66, 1);
 	box-shadow: 0 0 0 0 rgba(255, 177, 66, 1);
   animation: pulse-yellow 3s infinite;
+}
+
+.title-block {
+  letter-spacing: 0;
+  font-size: var(--font-size-h5);
+}
+.next-container .container-inner:after, .next-container .container-inner:before, .prev-container .container-inner:after, .prev-container .container-inner:before {
+  background-color: rgb(255, 255, 255, 0%);
 }
 
 @keyframes pulse-yellow {
@@ -337,6 +350,11 @@ body, .main-root {
   height: 1px;
   background: var(--border-color);
 }
+
+.skills-personal .box-img .img-item .cover-bg-img {
+  border-radius: 2rem;
+}
+
 @media only screen and (max-width: 400px) {
   .line-shap:before, .line-shap:after {
     display: none;
@@ -358,13 +376,19 @@ body, .main-root {
   background-color: var(--reverse-color);
   z-index: 1;
 }
-.corner:after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 15px;
-  background-color: var(--reverse-color);
+
+.corner.blue {
+  background-color: var(--theme-color4);
 }
+
+.corner.red {
+  background-color: var(--theme-color1);
+}
+
+.corner.yellow {
+  background-color: var(--theme-color3);
+}
+
 .corner.corner-left-top, .corner.corner-left-top:after, .corner.corner-left-bottom, .corner.corner-left-bottom:after {
   left: 0;
 }
@@ -446,6 +470,8 @@ body, .main-root {
     right: var(--body-style-space);
   }
 }
+
+
 
 /**
    End Body Style Line
@@ -2457,6 +2483,18 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
 .services {
   counter-reset: workcounter;
 }
+
+.services .swiper-slide:not(.swiper-slide-active) {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.services .swiper-slide .service-description p {
+  font-family: var(--subtitle-font);
+  font-weight: 400;
+  font-size: var(--font-size-h6);
+}
+
 @media only screen and (min-width: 992px) {
   .services.dsn-under-header .dsn-container {
     padding-left: 0;
@@ -2522,7 +2560,7 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
   line-height: 1;
 }
 .services .services-item .services-item-inner .icon img, .services .services-item .services-item-inner .icon svg {
-  width: 60px;
+  height: 60px;
   fill: var(--theme-color);
 }
 @media only screen and (min-width: 768px) {
@@ -4157,10 +4195,6 @@ header .scroll-d img {
   width: 60px;
 }
 
-.footer-social ul li a img {
-  width: auto;
-  height: 20px;
-}
 .v-light header .scroll-d img {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -5340,8 +5374,23 @@ body.dsn-show-contact .contact-modal {
                    Footer
 -------------------------------------------------------- */
 .footer {
-  border-top: 0px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
 }
+
+.footer .column-right h5{
+  font-family: var(--font-pre);
+  letter-spacing: 0;
+}
+
+.footer .column-right a{
+  font-family: var(--font-pre);
+  letter-spacing: 0;
+}
+
+.footer .footer-container {
+  padding: 30px 0;
+}
+
 @media only screen and (max-width: 767px) {
   .footer .footer-container > div {
     -webkit-box-orient: vertical;
@@ -5350,40 +5399,43 @@ body.dsn-show-contact .contact-modal {
             flex-direction: column;
   }
 }
+.footer .column-left,
+.footer .column-right {
+  width: calc(50% - 35px);
+}
 @media only screen and (max-width: 767px) {
-  .footer .social-icones,
-.footer .credits-epec {
+  .footer .column-left,
+  .footer .column-right {
     width: 100%;
     text-align: center;
   }
 }
 
-.footer .social-icones {
-  text-align: right;
-}
-
-.footer .social-icones .logo-footer img {
+.footer .column-left .logo-footer img {
   width: 75px;
 }
-.footer .social-icones .footer-social ul {
+.footer .column-left .footer-social ul {
   margin: 0;
 }
-.footer .social-icones .footer-social ul li {
+.footer .column-left .footer-social ul li {
   color: var(--heading-color);
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
-  margin-left: 5px;
+  margin-right: 5px;
+  padding-right: 5px;
 }
 @media only screen and (max-width: 575px) {
-  .footer .social-icones .footer-social ul li {
+  .footer .column-left .footer-social ul li {
     font-size: 13px;
+    margin-right: 3px;
+    padding-right: 3px;
   }
 }
-.footer .social-icones .footer-social ul li:first-of-type {
+.footer .column-left .footer-social ul li:first-of-type {
   padding-left: 0;
 }
-.footer .social-icones .footer-social ul li a {
+.footer .column-left .footer-social ul li a {
   color: var(--heading-color);
   display: inline-block;
   letter-spacing: 2px;
@@ -5392,31 +5444,30 @@ body.dsn-show-contact .contact-modal {
   font-weight: 400;
   position: relative;
 }
-.footer .credits-epec {
+.footer .column-right {
   text-align: right;
-  margin-top: 10px;
 }
 @media only screen and (max-width: 767px) {
-  .footer .credits-epec {
+  .footer .column-right {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
-.footer .credits-epec h5 {
-  font-family: 'Montserrat Medium', sans-serif;
+.footer .column-right h5 {
   color: var(--font-color);
   display: inline-block;
-  font-size: 12px;
-  letter-spacing:0px;
+  font-size: 13px;
+  font-weight: 400;
   overflow: hidden;
 }
-.footer .credits-epec h5 .love {
+.footer .column-right h5 .love {
   color: #fd4145;
   padding-left: 5px;
+  padding-right: 5px;
   font-size: 16px;
   font-weight: bold;
 }
-.footer .credits-epec h5 .link-hover {
+.footer .column-right h5 .link-hover {
   text-transform: initial;
 }
 .footer .scroll-top {
