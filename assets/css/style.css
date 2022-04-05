@@ -2621,7 +2621,7 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
     display: none;
   }
   .box-awards-item .title {
-    font-size: 16px;
+    font-size: 0.9rem;
   }
 }
 .service-lest-item .icon {
@@ -4225,6 +4225,10 @@ header .scroll-d img {
 .main-slider .dsn-slider-content .slide-content {
   padding-bottom: 40px;
   padding-top: 40px;
+}
+
+.slide-content h1.title {
+  font-family: var(--body-font);
 }
 
 .slide-content strong{
