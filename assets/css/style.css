@@ -176,10 +176,6 @@ p cite{
   background-color: rgb(255, 255, 255, 0%);
 }
 
-.title {
-  font-size: var(--font-size-h4);
-  letter-spacing: 0px
-}
 
 @keyframes pulse-yellow {
 	0% {
@@ -2432,7 +2428,7 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
 }
 .box-awards-item .title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: var(--font-size-h5);
   letter-spacing: 0;
 }
 
@@ -2614,6 +2610,9 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
   .grid-md-4 {
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4,1fr);
+  }
+  .about-section .background-mask .box-awards-item {
+    margin-bottom: -120px;
   }
 }
 @media only screen and (max-width: 575px) {
@@ -4229,6 +4228,7 @@ header .scroll-d img {
 
 .slide-content h1.title {
   font-family: var(--body-font);
+  font-size: var(--font-size-h4);
 }
 
 .slide-content strong{
