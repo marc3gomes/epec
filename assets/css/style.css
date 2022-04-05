@@ -152,6 +152,10 @@ h6.red {
   color:var(--theme-color1);
 }
 
+h6.orange {
+  color:var(--theme-color2);
+}
+
 p {
   font-family: var(--subtitle-font);
   font-weight:600;
@@ -354,6 +358,10 @@ body, .main-root {
 
 .skills-personal .box-img .img-item .cover-bg-img {
   border-radius: 2rem;
+}
+
+.skills-personal .box-skills-inner a.yellow {
+  color: var(--theme-color3);
 }
 
 @media only screen and (max-width: 400px) {
