@@ -2612,7 +2612,7 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
     grid-template-columns: repeat(4,1fr);
   }
   .about-section .background-mask .box-awards-item {
-    margin-bottom: -120px;
+    margin-bottom: -50px;
   }
 }
 @media only screen and (max-width: 575px) {
