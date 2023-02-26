@@ -1,0 +1,23 @@
+{
+  "name": "epec",
+  "version": "1.0.0",
+  "description": "Site institucional da Escola Pernanbucana de Economia Criativa",
+  "main": "index.ejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marc-go/epecv2.git"
+  },
+  "author": "Marc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marc-go/epecv2/issues"
+  },
+  "homepage": "https://github.com/marc-go/epecv2#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}
