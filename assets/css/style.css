@@ -1104,7 +1104,7 @@ input[type=search]::-webkit-search-decoration {
 .visit-site .text {
   position: relative;
   padding: 0 20px 0 30px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 2px;
   text-decoration: none;
@@ -2508,6 +2508,13 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
   grid-auto-flow: dense;
   grid-column-gap: .5em;
   grid-row-gap: .5em;
+}
+
+@media only screen and (max-width: 450px) {
+  .box-awards-item {
+    grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+    grid-auto-rows: minmax(98px, auto);
+  }
 }
 
 .box-awards-item.big-number .title {
