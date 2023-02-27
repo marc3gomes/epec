@@ -1083,6 +1083,7 @@ input[type=search]::-webkit-search-decoration {
   -o-transition: 0.5s transform, 0.5s right, 0.5s width;
   transition: 0.5s transform, 0.5s right, 0.5s width;
   transition: 0.5s transform, 0.5s right, 0.5s width, 0.5s -webkit-transform;
+  text-decoration: none;
 }
 .visit-site:after {
   content: "";
@@ -1098,6 +1099,7 @@ input[type=search]::-webkit-search-decoration {
   transition: 0.9s transform, 0.9s width;
   transition: 0.9s transform, 0.9s width, 0.9s -webkit-transform;
   z-index: -1;
+  text-decoration: none;
 }
 .visit-site .text {
   position: relative;
@@ -1105,6 +1107,7 @@ input[type=search]::-webkit-search-decoration {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 .visit-site .text:before {
   content: "";
@@ -1123,22 +1126,26 @@ input[type=search]::-webkit-search-decoration {
   -o-transition: 0.7s transform;
   transition: 0.7s transform;
   transition: 0.7s transform, 0.7s -webkit-transform;
+  text-decoration: none;
 }
 .visit-site:hover::before {
   -webkit-transform: translateY(-50%) scale(0);
       -ms-transform: translateY(-50%) scale(0);
           transform: translateY(-50%) scale(0);
+          text-decoration: none;
 }
 .visit-site:hover:after {
   width: 100%;
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
+          text-decoration: none;
 }
 .visit-site:hover h6:before {
   -webkit-transform: translateY(-50%) scaleX(0);
       -ms-transform: translateY(-50%) scaleX(0);
           transform: translateY(-50%) scaleX(0);
+          text-decoration: none;
 }
 .visit-site .icon {
   display: -webkit-box;
