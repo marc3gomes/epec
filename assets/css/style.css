@@ -1258,7 +1258,7 @@ body:not(.v-dark):not(.dsn-line-style) .site-header {
   display: none;
 }
 .site-header .main-logo .mobile-logo {
-  width: 148px;
+  width: 132px;
   display: none;
 }
 body:not(.v-dark) .site-header .main-logo .light-logo {
@@ -2724,7 +2724,7 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
     display: none;
   }
   .box-awards-item .title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 .service-lest-item .icon {
@@ -3950,6 +3950,7 @@ body:not(.dsn-line-style).nav-bg.hide-nav .site-header {
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  margin: 0 1rem 0;
 }
 .hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
   -webkit-animation-name: hvr-bob-float, hvr-bob;
