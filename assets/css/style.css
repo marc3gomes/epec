@@ -1284,7 +1284,7 @@ body:not(.v-dark) .site-header .main-logo .dark-logo {
     display: none;
   }
   .site-header .main-logo .mobile-logo {
-    width: 176px;
+    width: 132px;
     display: inherit;
   }
 }
